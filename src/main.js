@@ -1,3 +1,17 @@
-import path from 'path';
+import yargs from 'yargs';
 
-console.log(path.resolve(__dirname, './hello'));
+const argv = yargs
+  .option('pattern', {
+    alias: 'p',
+    description: `
+      To show result of JS Design pattern
+      oc -- object createion
+    `,
+    type: 'string',
+  })
+  .help()
+  .alias('help', 'h').argv;
+
+const { pattern } = argv;
+
+console.log('pattern', pattern);
