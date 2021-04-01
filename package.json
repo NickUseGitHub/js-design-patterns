@@ -12,9 +12,23 @@
   "devDependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
-    "@babel/register": "^7.13.14"
+    "@babel/register": "^7.13.14",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1"
   },
   "dependencies": {
     "yargs": "^16.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
