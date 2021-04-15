@@ -1,5 +1,6 @@
 import yargs from 'yargs';
 import oc from './constructPattern/objectCreation';
+import st from './singletonPattern';
 
 const argv = yargs
   .option('pattern', {
@@ -8,6 +9,9 @@ const argv = yargs
     To show result of JS Design pattern
       *** Constructor Pattern ***
       oc -- object createion
+
+      *** Singleton Pattern ***
+      st -- single createion
     `,
     type: 'string',
   })
@@ -18,4 +22,5 @@ const { pattern } = argv;
 
 ({
   oc,
+  st,
 }[pattern]());
