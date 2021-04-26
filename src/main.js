@@ -1,6 +1,7 @@
 import yargs from 'yargs';
 import oc from './constructPattern/objectCreation';
 import st from './singletonPattern';
+import obs from './observerPattern';
 
 const argv = yargs
   .option('pattern', {
@@ -12,6 +13,9 @@ const argv = yargs
 
       *** Singleton Pattern ***
       st -- single createion
+
+      *** Observer Pattern ***
+      obs -- observer pattern
     `,
     type: 'string',
   })
@@ -23,4 +27,5 @@ const { pattern } = argv;
 ({
   oc,
   st,
+  obs,
 }[pattern]());
