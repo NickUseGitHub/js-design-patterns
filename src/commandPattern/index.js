@@ -1,3 +1,11 @@
+function VehicleManager({ x }) {
+  this.x = x;
+
+  return this;
+}
+
 export default function main() {
-  console.log('this command pattern');
+  const sarmHlor = new VehicleManager({ x: 20 });
+
+  console.log('sarmHlor', sarmHlor);
 }
