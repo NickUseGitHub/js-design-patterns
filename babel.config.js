@@ -1,15 +1,18 @@
 const presets = [
   [
-    "@babel/env",
+    '@babel/env',
     {
       targets: {
-        "esmodules": true,
-        "node": '10.16.3',
+        esmodules: true,
+        node: '10.16.3',
       },
-      useBuiltIns: "usage",
-      corejs: "3.6.4",
+      useBuiltIns: 'usage',
+      corejs: '3.6.4',
     },
   ],
 ];
 
-module.exports = { presets };
+module.exports = {
+  plugins: ['@babel/plugin-transform-spread'],
+  presets,
+};
